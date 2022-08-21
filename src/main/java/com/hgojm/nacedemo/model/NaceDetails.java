@@ -1,20 +1,24 @@
 package com.hgojm.nacedemo.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
 @Entity
-@Table(name = "nace_info")
+@Table(name = "nace_details")
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Builder
-public class NaceInfo {
+public class NaceDetails {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(name = "order")
+    @Column(name = "order_number")
     private Integer order;
     @Column(name = "level")
     private Integer level;
