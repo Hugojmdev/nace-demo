@@ -1,0 +1,90 @@
+{
+	"info": {
+		"_postman_id": "6f127efe-2849-45ae-9325-df29597d60fd",
+		"name": "nace-demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get By order number",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/nace-details/123456",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"nace-details",
+						"123456"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get NACE detais",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/nace-details?size=5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"nace-details"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0",
+							"disabled": true
+						},
+						{
+							"key": "size",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Nace Details",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"order\": 123456,\r\n    \"level\": 4,\r\n    \"code\": \"\",\r\n    \"parent\": \"\",\r\n    \"description\": \"\",\r\n    \"includes\": \"\",\r\n    \"alsoIncludes\": \"\",\r\n    \"excludes\": \"\",\r\n    \"rulings\": \"\",\r\n    \"referenceIsicRev4\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/nace-details",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"nace-details"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
